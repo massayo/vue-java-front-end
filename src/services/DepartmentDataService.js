@@ -10,7 +10,12 @@ class DepartmentDataService {
   }
 
   create(data) {
-    return http.post("/departments", data);
+    /*let config = {
+      header : {
+       'Content-Type' : 'multipart/form-data'
+     }
+    }*/
+    return http.post("/departments", data);//, config);
   }
 
   update(id, data) {
